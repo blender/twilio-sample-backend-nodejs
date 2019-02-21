@@ -4,7 +4,7 @@ const cors = require('cors');
 const { requireAuthHeader } = require('./api/userValidation');
 const { authenticate } = require('./api/authenticate');
 const { generateVirgilJwt } = require('./api/virgilToken');
-const { generateTwilioJwt } = require('./api/twilioToken');
+// const { generateTwilioJwt } = require('./api/twilioToken');
 
 const app = express();
 
