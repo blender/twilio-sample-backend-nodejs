@@ -13,7 +13,7 @@ app.use(express.json());
 
 app.post('/authenticate', authenticate);
 app.get('/virgil-jwt', requireAuthHeader, generateVirgilJwt);
-app.get('/twilio-jwt', requireAuthHeader, generateTwilioJwt);
-app.use(express.static('./public/'));
+// app.get('/twilio-jwt', requireAuthHeader, generateTwilioJwt);
+// app.use(express.static('./public/'));
 
 module.exports = app;
