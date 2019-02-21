@@ -17,7 +17,7 @@ const requireAuthHeader = (req, res, next) => {
 
   const userToken = req.headers.authorization.split('Bearer ')[1];
 
-  if (!pseudoVerifyToken(userToken)) res.status(401).send('Unauthorized');
+  if (!pseudoVerifyToken(userToken)) res.status(401).send('Unauthorized help');
 
   req.user = { identity: pseudoDecodeToken(userToken) };
   next();
