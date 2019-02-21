@@ -14,6 +14,9 @@ app.use(express.json());
 app.post('/authenticate', authenticate);
 app.get('/virgil-jwt', requireAuthHeader, generateVirgilJwt);
 app.get('/twilio-jwt', requireAuthHeader, generateTwilioJwt);
+app.get('/', function (req, res) {
+    res.send('GET request to the homepage')
+})
 app.use(express.static('./public/'));
 
 module.exports = app;
